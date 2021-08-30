@@ -1,0 +1,29 @@
+#pane {
+  -fx-background-color: #545454;
+}
+
+#number-buttons {
+  -fx-font-size: 25px;
+  -fx-font-weight: bold;
+  -fx-background-color: #242424;
+}
+
+.operation-buttons {
+  -fx-font-size: 25px;
+  -fx-background-color: #7dd0d0;
+  -fx-border-width: 1px;
+  -fx-border-color: #545454;
+}
+
+#util-buttons {
+  -fx-font-size: 20px;
+  -fx-background-color: grey;
+}
+
+.white-text-buttons {
+  -fx-text-fill: #dbdbdb;
+}
+
+#minus-button {
+  -fx-font-size: 35px;
+}

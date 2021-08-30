@@ -5,11 +5,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0"
-  prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-  fx:controller="com.gilmango.calculator.controllers.CalculatorController">
+<BorderPane id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gilmango.calculator.controllers.CalculatorController">
    <center>
-      <GridPane prefHeight="152.0" prefWidth="369.0" BorderPane.alignment="CENTER">
+      <GridPane id="pane" prefHeight="150.0" prefWidth="360.0" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -17,36 +15,40 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="7" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="8" GridPane.columnIndex="1" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="4" GridPane.rowIndex="1" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="1" GridPane.rowIndex="2" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="9" GridPane.columnIndex="2" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="/" GridPane.columnIndex="3" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="." GridPane.rowIndex="3" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="ANS" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="=" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="7" GridPane.rowIndex="1" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="4" GridPane.rowIndex="2" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="1" GridPane.rowIndex="3" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="operation-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button id="minus-button" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="operation-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="operation-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="." GridPane.rowIndex="4" />
+            <Button id="number-buttons" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="ANS" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="operation-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button id="util-buttons" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="HIST" />
+            <Button id="util-buttons" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="C" GridPane.columnIndex="1" />
+            <Button id="util-buttons" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-text-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="DEL" GridPane.columnIndex="2" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="operation-buttons" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="/" GridPane.columnIndex="3" />
          </children>
       </GridPane>
    </center>
    <top>
-      <TitledPane animated="false" prefHeight="200.0" prefWidth="600.0" text="Calculator" BorderPane.alignment="CENTER">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="291.0" />
-        </content>
-      </TitledPane>
+      <TitledPane id="pane" animated="false" collapsible="false" prefHeight="200.0" prefWidth="580.0" stylesheets="@../java/com/gilmango/calculator/styles/stylesheet.css" text="Calculator" BorderPane.alignment="CENTER">
+         <content>
+            <Label text="Label" />
+         </content></TitledPane>
    </top>
 </BorderPane>
