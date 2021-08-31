@@ -22,8 +22,7 @@ public class Calculator extends Application {
     stage.show();
   }
 
-  public static void main(String[] args) {
-    Application.launch(Calculator.class);
+  public static void main(String args) {
+     launch(Calculator.class);
   }
-
 }
