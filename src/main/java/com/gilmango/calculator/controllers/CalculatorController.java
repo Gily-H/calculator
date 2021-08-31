@@ -31,7 +31,6 @@ public class CalculatorController {
   // calculate the current displayed expression
   private void calculateExpression() {
 
-
     // save answer to history
     answers.add("ANSWER");
   }
@@ -39,7 +38,11 @@ public class CalculatorController {
   // "DEL"
   // delete the previous input entry made by user
   private void deletePreviousInput() {
-
+    String expression = expressionLabel.getText();
+    if (!expression.equals("")) {
+      int lastInputIndex = expression.length() - 1;
+      expressionLabel.setText(expression.substring(0, lastInputIndex));
+    }
   }
 
   // "HIS"
