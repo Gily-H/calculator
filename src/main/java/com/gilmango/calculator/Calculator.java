@@ -9,20 +9,21 @@ import javafx.stage.Stage;
 
 public class Calculator extends Application {
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(
-            getClass().getResource("/calculator.fxml"));
+  @Override
+  public void start(Stage stage) throws Exception {
+    Parent root = FXMLLoader.load(
+        getClass().getResource("/calculator.fxml"));
 
-        root.getStylesheets().add(String.valueOf(getClass().getResource("/styles/stylesheet.css")));
+    root.getStylesheets().add(String.valueOf(getClass().getResource("/styles/stylesheet.css")));
 
-        Scene scene = new Scene(root);
+    Scene scene = new Scene(root);
 
-        stage.setScene(scene);
-        stage.show();
-    }
+    stage.setScene(scene);
+    stage.show();
+  }
 
-    public static void main(String args) {
-        launch(Calculator.class);
-    }
+  public static void main(String[] args) {
+    Application.launch(Calculator.class);
+  }
+
 }

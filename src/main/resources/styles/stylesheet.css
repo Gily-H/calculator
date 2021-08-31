@@ -1,14 +1,8 @@
-#pane {
-  -fx-background-color: #545454;
-}
-
-#number-buttons {
-  -fx-font-size: 25px;
-  -fx-font-weight: bold;
+#backdrop {
   -fx-background-color: #242424;
 }
 
-.operation-buttons {
+#operation-buttons {
   -fx-font-size: 25px;
   -fx-background-color: #7dd0d0;
   -fx-border-width: 1px;
@@ -16,12 +10,16 @@
 }
 
 #util-buttons {
-  -fx-font-size: 20px;
-  -fx-background-color: grey;
+  -fx-background-color: #a7a7a7;
+  -fx-font-weight: bold;
+  -fx-border-width: 1px;
+  -fx-border-color: #868686;
 }
 
 .white-text-buttons {
   -fx-text-fill: #dbdbdb;
+  -fx-font-size: 25px;
+  -fx-font-weight: bold;
 }
 
 #minus-button {
