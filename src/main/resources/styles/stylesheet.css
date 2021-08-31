@@ -1,15 +1,15 @@
-#backdrop {
+.backdrop {
   -fx-background-color: #242424;
 }
 
-#operation-buttons {
+.operation-buttons {
   -fx-font-size: 25px;
   -fx-background-color: #7dd0d0;
   -fx-border-width: 1px;
   -fx-border-color: #545454;
 }
 
-#util-buttons {
+.util-buttons {
   -fx-background-color: #a7a7a7;
   -fx-font-weight: bold;
   -fx-border-width: 1px;

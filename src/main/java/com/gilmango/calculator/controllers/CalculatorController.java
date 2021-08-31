@@ -1,6 +1,8 @@
 package com.gilmango.calculator.controllers;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.fxml.FXML;
@@ -9,13 +11,15 @@ import javafx.scene.input.MouseEvent;
 public class CalculatorController {
 
   private final String errorMsg = "ERROR";
+  List<String> answers = new ArrayList<>();
+  private String previousAnswer;
 
   @FXML
   private Label expressionLabel;
   @FXML
   private Label resultLabel;
 
-  // appends operand and operator to the math expression displayed
+  // append operand or operator to the math expression displayed
   private void addToExpression(String input) {
     String expression = expressionLabel.getText();
     expressionLabel.setText(
@@ -27,6 +31,9 @@ public class CalculatorController {
   // calculate the current displayed expression
   private void calculateExpression() {
 
+
+    // save answer to history
+    answers.add("ANSWER");
   }
 
   // "DEL"
@@ -44,7 +51,9 @@ public class CalculatorController {
   // "ANS"
   // retrieve and display the previous answer calculated
   private void retrievePreviousAnswer() {
-
+    if (!previousAnswer.equals("")) {
+      expressionLabel.setText(previousAnswer);
+    }
   }
 
   // "C"
@@ -59,9 +68,7 @@ public class CalculatorController {
 
   public void onMouseClick(MouseEvent mouseEvent) {
     Button sourceBtn = (Button) mouseEvent.getSource();
-
     String input = sourceBtn.getText();
-    addToExpression(input);
 
     switch (input) {
       // operands
@@ -91,12 +98,16 @@ public class CalculatorController {
       // utilities
       case "DEL":
         deletePreviousInput();
+        break;
       case "ANS":
         retrievePreviousAnswer();
+        break;
       case "HIS":
         showHistory();
+        break;
       case "C":
         clearExpression();
+        break;
       default:
         displayError();
         break;
