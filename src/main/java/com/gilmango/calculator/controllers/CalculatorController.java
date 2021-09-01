@@ -20,7 +20,7 @@ public class CalculatorController {
   private Label resultLabel;
 
   // append operand or operator to the math expression displayed
-  private void addToExpression(String input) {
+  private void addToInputExpression(String input) {
     String expression = expressionLabel.getText();
     expressionLabel.setText(
         input.equals(errorMsg) ? input : expression.concat(input)
@@ -30,6 +30,17 @@ public class CalculatorController {
   // "="
   // calculate the current displayed expression
   private void calculateExpression() {
+
+    // extract expression
+
+    // loop through expression string
+      // save numbers to list
+      // save operators to list
+
+    // loop through numbers list
+      // apply operator to every pair of numbers
+
+    // display result in resultLabel
 
     // save answer to history
     answers.add("ANSWER");
@@ -47,7 +58,7 @@ public class CalculatorController {
 
   // "HIS"
   // show past expressions that were entered
-  private void showHistory() {
+  private void showAnswerHistory() {
 
   }
 
@@ -74,46 +85,13 @@ public class CalculatorController {
     String input = sourceBtn.getText();
 
     switch (input) {
-      // operands
-      case "0":
-      case "1":
-      case "2":
-      case "3":
-      case "4":
-      case "5":
-      case "6":
-      case "7":
-      case "8":
-      case "9":
-
-      // operators
-      case ".":
-      case "+":
-      case "-":
-      case "*":
-      case "/":
-        addToExpression(input);
-        break;
-      case "=":
-        calculateExpression();
-        break;
-
-      // utilities
-      case "DEL":
-        deletePreviousInput();
-        break;
-      case "ANS":
-        retrievePreviousAnswer();
-        break;
-      case "HIS":
-        showHistory();
-        break;
-      case "C":
-        clearExpression();
-        break;
-      default:
-        displayError();
-        break;
+      case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "+", "-", "*", "/" -> addToInputExpression(input);
+      case "=" -> calculateExpression();
+      case "DEL" -> deletePreviousInput();
+      case "ANS" -> retrievePreviousAnswer();
+      case "HIS" -> showAnswerHistory();
+      case "C" -> clearExpression();
+      default -> displayError();
     }
   }
 }
