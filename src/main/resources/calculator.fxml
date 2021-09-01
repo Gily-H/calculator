@@ -1,119 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" styleClass="backdrop" stylesheets="@styles/stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gilmango.calculator.controllers.CalculatorController">
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+  nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="350.0" styleClass="backdrop"
+  stylesheets="@styles/stylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.gilmango.calculator.controllers.CalculatorController">
   <center>
-    <GridPane prefHeight="150.0" prefWidth="360.0" styleClass="backdrop" stylesheets="@styles/stylesheet.css" BorderPane.alignment="CENTER">
+    <GridPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="150.0" prefWidth="360.0" styleClass="backdrop"
+      stylesheets="@styles/stylesheet.css" BorderPane.alignment="CENTER">
       <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
       </columnConstraints>
       <rowConstraints>
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
       </rowConstraints>
       <children>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="7" GridPane.rowIndex="1">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="4" GridPane.rowIndex="2">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="1" GridPane.rowIndex="3">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="." GridPane.rowIndex="4">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="/" GridPane.columnIndex="3" />
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="ANS" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="backdrop" />
-               </styleClass></Button>
-        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="HIS">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="util-buttons" />
-               </styleClass></Button>
-        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="C" GridPane.columnIndex="1">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="util-buttons" />
-               </styleClass></Button>
-        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="DEL" GridPane.columnIndex="2">
-               <styleClass>
-                  <String fx:value="white-text-buttons" />
-                  <String fx:value="util-buttons" />
-               </styleClass></Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="7" GridPane.rowIndex="1">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="4" GridPane.rowIndex="2">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="1" GridPane.rowIndex="3">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="." GridPane.rowIndex="4">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="+" GridPane.columnIndex="3"
+          GridPane.rowIndex="2"/>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="-" GridPane.columnIndex="3"
+          GridPane.rowIndex="3"/>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="*" GridPane.columnIndex="3"
+          GridPane.rowIndex="1"/>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308"
+        mnemonicParsing="false"
+          onMouseClicked="#onMouseClick" styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="/"
+          GridPane.columnIndex="3"/>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          styleClass="operation-buttons" stylesheets="@styles/stylesheet.css" text="=" GridPane.columnIndex="3"
+          GridPane.rowIndex="4"/>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick"
+          stylesheets="@styles/stylesheet.css" text="ANS" GridPane.columnIndex="2" GridPane.rowIndex="4">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="backdrop"/>
+          </styleClass>
+        </Button>
+        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+          onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="HIS">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="util-buttons"/>
+          </styleClass>
+        </Button>
+        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+          onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="C" GridPane.columnIndex="1">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="util-buttons"/>
+          </styleClass>
+        </Button>
+        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+          onMouseClicked="#onMouseClick" stylesheets="@styles/stylesheet.css" text="DEL" GridPane.columnIndex="2">
+          <styleClass>
+            <String fx:value="white-text-buttons"/>
+            <String fx:value="util-buttons"/>
+          </styleClass>
+        </Button>
       </children>
     </GridPane>
   </center>
   <top>
-    <TitledPane animated="false" collapsible="false" prefHeight="200.0" prefWidth="580.0" styleClass="backdrop" stylesheets="@styles/stylesheet.css" text="Calculator" BorderPane.alignment="CENTER">
-         <content>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="backdrop" stylesheets="@styles/stylesheet.css">
-               <children>
-                  <Label fx:id="resultLabel" layoutX="199.0" layoutY="123.0" prefHeight="36.0" prefWidth="125.0" styleClass="white-text-buttons" stylesheets="@styles/stylesheet.css" textAlignment="RIGHT" />
-                  <Label fx:id="expressionLabel" layoutX="17.0" layoutY="80.0" prefHeight="36.0" prefWidth="308.0" styleClass="white-text-buttons" stylesheets="@styles/stylesheet.css" textAlignment="RIGHT" />
-               </children>
-            </AnchorPane>
-         </content>
+    <TitledPane animated="false" collapsible="false" prefHeight="200.0" prefWidth="580.0" styleClass="backdrop"
+      stylesheets="@styles/stylesheet.css" text="Calculator" BorderPane.alignment="CENTER">
+      <content>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="backdrop" stylesheets="@styles/stylesheet.css">
+          <children>
+            <Label fx:id="resultLabel" layoutX="199.0" layoutY="123.0" prefHeight="36.0" prefWidth="125.0"
+              styleClass="white-text-buttons" stylesheets="@styles/stylesheet.css" textAlignment="RIGHT"/>
+            <Label fx:id="expressionLabel" layoutX="17.0" layoutY="80.0" prefHeight="36.0" prefWidth="308.0"
+              styleClass="white-text-buttons" stylesheets="@styles/stylesheet.css" textAlignment="RIGHT"/>
+          </children>
+        </AnchorPane>
+      </content>
     </TitledPane>
   </top>
 </BorderPane>
