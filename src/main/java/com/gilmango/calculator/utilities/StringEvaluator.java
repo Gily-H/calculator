@@ -1,37 +1,18 @@
 package com.gilmango.calculator.utilities;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
 
 public class StringEvaluator {
 
-  public static String convertToPostFix(String expression) {
-    StringBuilder builder = new StringBuilder();
-    Deque<Character> stack = new ArrayDeque<>();
-    char[] letters = expression.toCharArray();
+  public static double calculateExpression(String expression) {
+    Expression exp = new ExpressionBuilder(expression).build();
 
-    for (char letter : letters) {
-      if (Character.isDigit(letter) || letter == '.') {
-        builder.append(letter);
-      } else {
-        if (!stack.isEmpty() || !hasHigherPrecedence(letter, stack.peek())) {  // high prec just push on stack
-          builder.append(stack.pop());  // lower prec pop previous operator
-        }
-        stack.push(letter);
-      }
-    }
-
-    return builder.toString();
+    return exp.evaluate();
   }
 
-
-  public static boolean hasHigherPrecedence(char operator, char operatorToCompare) {
-    boolean isHigher = false;
-
-    if (operatorToCompare == '+' || operatorToCompare == '-')
-      isHigher = operator == '*' || operator == '/';
-
-    return isHigher;
+  public static void main(String[] args) {
+    System.out.println(calculateExpression(null));
   }
 
 }
