@@ -4,9 +4,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Calculator extends Application {
+
+  private static Stage historyStage;
 
   @Override
   public void start(Stage stage) throws Exception {
@@ -19,6 +22,18 @@ public class Calculator extends Application {
 
     stage.setScene(scene);
     stage.show();
+
+    initHistoryStage();
+  }
+
+  private void initHistoryStage() {
+    historyStage = new Stage();
+    historyStage.setTitle("History");
+    historyStage.initModality(Modality.APPLICATION_MODAL);
+  }
+
+  public static Stage getHistoryStage() {
+    return historyStage;
   }
 
   public static void main(String[] args) {
