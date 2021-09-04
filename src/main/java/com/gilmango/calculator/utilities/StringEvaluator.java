@@ -11,8 +11,4 @@ public class StringEvaluator {
     return exp.evaluate();
   }
 
-  public static void main(String[] args) {
-    System.out.println(calculateExpression(null));
-  }
-
 }

@@ -1,6 +1,6 @@
 package com.gilmango.calculator.controllers;
 
-
+import com.gilmango.calculator.utilities.StringEvaluator;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.control.Button;
@@ -12,15 +12,14 @@ public class CalculatorController {
 
   private final String errorMsg = "ERROR";
   List<String> answers = new ArrayList<>();
-  private String previousAnswer;
 
   @FXML
   private Label expressionLabel;
   @FXML
   private Label resultLabel;
 
-  // append operand or operator to the math expression displayed
-  private void addToInputExpression(String input) {
+  // append button input to the end of expression
+  private void addInputToExpression(String input) {
     String expression = expressionLabel.getText();
     expressionLabel.setText(
         input.equals(errorMsg) ? input : expression.concat(input)
@@ -30,24 +29,15 @@ public class CalculatorController {
   // "="
   // calculate the current displayed expression
   private void calculateExpression() {
-
-    // extract expression
-
-    // loop through expression string
-      // save numbers to list
-      // save operators to list
-
-    // loop through numbers list
-      // apply operator to every pair of numbers
-
-    // display result in resultLabel
-
-    // save answer to history
-    answers.add("ANSWER");
+    String expression = expressionLabel.getText();
+    String result = String.valueOf(StringEvaluator.calculateExpression(expression));
+    resultLabel.setText(result);
+    answers.add(result);
+    clearExpression();
   }
 
   // "DEL"
-  // delete the previous input entry made by user
+  // delete the digit/operator at the end of the current expression
   private void deletePreviousInput() {
     String expression = expressionLabel.getText();
     if (!expression.equals("")) {
@@ -65,8 +55,10 @@ public class CalculatorController {
   // "ANS"
   // retrieve and display the previous answer calculated
   private void retrievePreviousAnswer() {
-    if (!previousAnswer.equals("")) {
-      expressionLabel.setText(previousAnswer);
+    if (!answers.isEmpty()) {
+      String currentExpression = expressionLabel.getText();
+      String previousAnswer = answers.get(answers.size() - 1);
+      expressionLabel.setText(currentExpression.concat(previousAnswer));
     }
   }
 
@@ -85,7 +77,7 @@ public class CalculatorController {
     String input = sourceBtn.getText();
 
     switch (input) {
-      case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "+", "-", "*", "/" -> addToInputExpression(input);
+      case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "+", "-", "*", "/" -> addInputToExpression(input);
       case "=" -> calculateExpression();
       case "DEL" -> deletePreviousInput();
       case "ANS" -> retrievePreviousAnswer();
